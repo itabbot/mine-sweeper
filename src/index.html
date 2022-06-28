@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>挨踢方丈的扫雷 | itabbot</title>
+    <link rel="shortcut icon" href="../imgs/icon.ico" type="image/x-icon" />
+    <link rel="Stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="ms-window">
+      <div class="win-title clearfix">
+        <div class="title">扫雷</div>
+        <ul class="controls">
+          <li class="min"></li>
+          <li class="max"></li>
+          <li class="close" onclick="window.close()"></li>
+        </ul>
+      </div>
+      <div class="win-body clearfix">
+        <div class="win-menubar clearfix">
+          <ul class="menu clearfix">
+            <li class="menu-item" tabindex="0">
+              <span>游戏</span>
+              <ul class="sub-menu clearfix">
+                <li
+                  class="menu-item"
+                  tabindex="2"
+                  onmousedown="MS.restart('easy')"
+                >
+                  容易
+                </li>
+                <li
+                  class="menu-item"
+                  tabindex="3"
+                  onmousedown="MS.restart('medium')"
+                >
+                  中等
+                </li>
+                <li
+                  class="menu-item"
+                  tabindex="4"
+                  onmousedown="MS.restart('difficult')"
+                >
+                  困难
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item" tabindex="1">
+              <span>帮助</span>
+              <ul class="sub-menu clearfix">
+                <li class="menu-item" tabindex="5" onmousedown="MS.howToPlay()">
+                  游戏说明
+                </li>
+                <li class="menu-item" tabindex="6" onmousedown="MS.about()">
+                  关于
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="win-content">
+          <div class="header clearfix">
+            <div class="remaining">
+              <img src="../imgs/liquid-crystal-numbers/0.bmp" />
+              <img src="../imgs/liquid-crystal-numbers/0.bmp" />
+              <img src="../imgs/liquid-crystal-numbers/0.bmp" />
+            </div>
+            <div class="face" onclick="MS.restart()">
+              <img src="../imgs/faces/normal.bmp" />
+            </div>
+            <div class="time">
+              <img src="../imgs/liquid-crystal-numbers/0.bmp" />
+              <img src="../imgs/liquid-crystal-numbers/0.bmp" />
+              <img src="../imgs/liquid-crystal-numbers/0.bmp" />
+            </div>
+          </div>
+          <div class="body">
+            <canvas id="ms-canvas"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="ms-canvas.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
