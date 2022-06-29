@@ -416,7 +416,7 @@ function MSCanvas(id, configs = {}) {
 
     if (typeof images !== "object") throw new Error("图像资源有误");
     imageKeys.forEach((imgKey) => {
-      if (!Object.prototype.hasOwnProperty.call(images, imgKey)) {
+      if (!images.imgKey) {
         throw new Error(`缺少图像资源${imgKey}`);
       }
     });
