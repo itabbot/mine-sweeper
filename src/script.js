@@ -74,7 +74,9 @@ window.MS = (function () {
     const [img] = document.querySelectorAll(".face img");
     img.src = "../imgs/faces/fail.bmp";
 
-    alert("游戏结束");
+    setTimeout(() => {
+      alert("游戏结束");
+    }, 100);
   };
 
   /**
@@ -85,7 +87,9 @@ window.MS = (function () {
     const [img] = document.querySelectorAll(".face img");
     img.src = "../imgs/faces/success.bmp";
 
-    alert("恭喜您获胜了");
+    setTimeout(() => {
+      alert("恭喜您获胜了");
+    }, 100);
   };
 
   /**
