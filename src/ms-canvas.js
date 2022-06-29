@@ -94,11 +94,13 @@ function MSCanvas(id, configs = {}) {
    * 停止游戏循环
    */
   const _stopGameLoop = async function () {
-    // 延迟执行
+    // 延迟几帧让画面绘制完毕
     await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(true);
-      }, 500);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          resolve(true);
+        });
+      });
     });
 
     // 清除计时器
