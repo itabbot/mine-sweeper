@@ -236,7 +236,7 @@ function MSCanvas(id, configs = {}) {
   const _handleMousedown = async function (event) {
     if (_isPlaying) {
       // 获取触发事件的格子
-      const grid = this._getGridByEvent(event);
+      const grid = _getGridByEvent(event);
       if (!grid) return;
 
       // 左键点击
@@ -416,7 +416,7 @@ function MSCanvas(id, configs = {}) {
 
     if (typeof images !== "object") throw new Error("图像资源有误");
     imageKeys.forEach((imgKey) => {
-      if (!images.imgKey) {
+      if (!images[imgKey]) {
         throw new Error(`缺少图像资源${imgKey}`);
       }
     });
