@@ -2,7 +2,7 @@
 
 ![示例图](./imgs/sample.gif)
 
-[请点击在线体验](https://itabbot.com/mine-sweeper)。
+[请点击在线体验](https://itabbot.com/mine-sweeper/src/index.html)。
 
 出于学习与兴趣，于是有了这款由 JavaScript + HTML + CSS 制作的经典扫雷游戏。它主要由三个部分构成，分别是：画布逻辑、用户交互、以及用户界面。
 
