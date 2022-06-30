@@ -187,15 +187,15 @@ window.MS = (function () {
         const config = {};
 
         // 根据类型调整配置
-        if (level === 1) {
+        if (level === "easy") {
           config.rowNum = 9;
           config.colNum = 9;
           config.mineNum = 10;
-        } else if (level === 2) {
+        } else if (level === "medium") {
           config.rowNum = 16;
           config.colNum = 16;
           config.mineNum = 40;
-        } else if (level === 3) {
+        } else if (level === "difficult") {
           config.rowNum = 16;
           config.colNum = 30;
           config.mineNum = 99;
